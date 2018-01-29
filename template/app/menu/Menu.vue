@@ -1,8 +1,11 @@
 <template>
-  <header class="navbar">
+  <header
+    class="navbar menu"
+    :class="`menu-${name}`">
+
     <section class="navbar-section">
       <nuxt-link
-        v-for="(item, index) in getMenuItems(name)"
+        v-for="(item, index) in getItems(name)"
         :key="index"
         :to="item.path"
         class="btn btn-link">
@@ -12,20 +15,15 @@
   </header>
 </template>
 
-<script>
-import { Component, Vue } from '~/vueclass';
-import { mapGetters } from 'vuex';
+<script lang="ts">
+import { Component, Vue, Prop, namespace, Getter } from '~/vueclass';
+const MenuGetters = namespace('menu', Getter);
 
-@Component({
-  props: {
-    name: {
-      type: String,
-      default: 'main',
-    },
-  },
-  computed: {
-    ...mapGetters('menu', ['getMenuItems']),
-  },
-})
-export default class Menu extends Vue {}
+@Component()
+export default class Menu extends Vue {
+  @Prop({ default: 'main' })
+  name: string;
+
+  @MenuGetters('getMenuItems') getItems;
+}
 </script>

@@ -92,6 +92,7 @@ module.exports = {
   plugins: ['~/app/menu'],
 
   modules: [
+    '~/app/utils/typescript',
     '@nuxtjs/router',
     '@nuxtjs/dotenv',
     // '@nuxtjs/pwa',
