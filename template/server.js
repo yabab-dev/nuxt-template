@@ -1,3 +1,5 @@
+require('@babel/polyfill');
+
 const { Nuxt, Builder } = require('nuxt');
 const config = require('./nuxt.config.js');
 

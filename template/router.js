@@ -1,4 +1,5 @@
 /* eslint-disable */
+import '@babel/polyfill';
 
 import Vue from 'vue';
 import Router from 'vue-router';

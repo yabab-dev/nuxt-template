@@ -8,12 +8,13 @@
         class="btn btn-link">
         {{ item.label }}
       </nuxt-link>
+      {{ foo }}
     </section>
   </header>
 </template>
 
 <script>
-import { Component, Vue } from '~/vueclass';
+import { Component, Vue, Prop } from '~/vueclass';
 import { mapGetters } from 'vuex';
 
 @Component({
@@ -27,5 +28,8 @@ import { mapGetters } from 'vuex';
     ...mapGetters('menu', ['getMenuItems']),
   },
 })
-export default class Menu extends Vue {}
+export default class Menu extends Vue {
+  @Prop({ type: String, default: 'bar' })
+  foo;
+}
 </script>
