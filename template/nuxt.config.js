@@ -76,7 +76,7 @@ module.exports = {
     },
   },
 
-  plugins: ['~/app/menu'],
+  plugins: ['~/app/stores'],
 
   modules: [
     '~/webpack/typescript',
