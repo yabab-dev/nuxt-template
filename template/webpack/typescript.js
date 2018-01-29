@@ -1,5 +1,4 @@
 module.exports = async function() {
-  // Extend build
   this.extendBuild(config => {
     // Add TS extension
     config.resolve.extensions.push('.ts');

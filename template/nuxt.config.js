@@ -4,21 +4,16 @@ require('dotenv').config();
 
 const path = require('path');
 const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-// const WebpackMonitor = require('webpack-monitor');
 
 const nameChunk = chunk => {
   if (chunk.name) return chunk.name;
-
   const basePath = `${path.resolve('.')}/app/`;
   const pathRegexp = new RegExp(basePath);
-
   for (const m of chunk._modules) {
     if (pathRegexp.test(m.context)) {
       return m.context.replace(basePath, '').split('/')[0];
     }
   }
-
   return null;
 };
 
@@ -60,6 +55,8 @@ module.exports = {
     },
 
     extend(config, { isDev, isClient }) {
+      process.isDev = isDev;
+
       /**
        * ESLint
        */
@@ -76,23 +73,16 @@ module.exports = {
        * Chunks names
        */
       config.plugins.push(new webpack.NamedChunksPlugin(nameChunk));
-
-      /**
-       * Bundles/chuncks analyzers
-       */
-      if (!isDev) {
-        // config.plugins.push(
-        //   new WebpackMonitor({ launch: true, taregt: path.resolve('./stats.json') }),
-        // );
-        config.plugins.push(new BundleAnalyzerPlugin());
-      }
     },
   },
 
   plugins: ['~/app/menu'],
 
   modules: [
-    '~/app/utils/typescript',
+    '~/webpack/typescript',
+    '~/webpack/imagemin',
+    '~/webpack/bundleAnalyzer',
+
     '@nuxtjs/router',
     '@nuxtjs/dotenv',
     // '@nuxtjs/pwa',
