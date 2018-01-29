@@ -1,16 +1,34 @@
-# Starter
+# Nuxt template
 
-A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
+WIP
 
-Live demo: https://starter.nuxtjs.org
+## Features
+
+* Pre-installed Nuxt modules
+  * @nuxtjs/dotenv
+  * @nuxtjs/router
+  * @nuxtjs/google-analytics
+  * @nuxtjs/pwa
+  * @nuxtjs/onesignal
+* TypeScript (Vue/Vuex class component & properties decorators)
+* Sass installed by default
+* ESLint & Prettier
+* Webpack Bundle Analyzer
+
+## WIP
+
+* Koa server
+* Units tests with Jest & vue-test-utils
+* E2E tests with Cypress
+* Accessibility checks with tota11y
 
 ## Installation
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
-``` bash
+```bash
 $ vue init nuxt-community/starter-template my-project  
-$ cd my-project                     
+$ cd my-project
 # install dependencies
 $ npm install # Or yarn install
 ```
@@ -21,7 +39,7 @@ $ npm install # Or yarn install
 
 ### Development
 
-``` bash
+```bash
 # serve with hot reloading at localhost:3000
 $ npm run dev
 ```
@@ -30,7 +48,7 @@ Go to [http://localhost:3000](http://localhost:3000)
 
 ### Production
 
-``` bash
+```bash
 # build for production and launch the server
 $ npm run build
 $ npm start
@@ -38,7 +56,7 @@ $ npm start
 
 ### Generate
 
-``` bash
+```bash
 # generate a static project
 $ npm run generate
 ```
