@@ -13,11 +13,16 @@ WIP
 * TypeScript (Vue/Vuex class component & properties decorators)
 * Sass installed by default
 * ESLint & Prettier
-* Webpack Bundle Analyzer
+* Webpack plugins
+  * Bundle analyzer
+  * Imagemin
+* Spectre.css
+* Hover.css & Animate.css
+* Popmotion
+* Koa server
 
 ## WIP
 
-* Koa server
 * Units tests with Jest & vue-test-utils
 * E2E tests with Cypress
 * Accessibility checks with tota11y
