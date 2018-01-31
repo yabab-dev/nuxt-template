@@ -1,6 +1,6 @@
 # Nuxt template
 
-WIP
+**WIP**
 
 ## Features
 
@@ -24,10 +24,6 @@ WIP
 * Units tests with @vue/test-utils
 * E2E tests with Cypress
 * Accessibility checks with tota11y
-
-## WIP
-* Cypress
-  * Start server before running it
 
 ## Installation
 
