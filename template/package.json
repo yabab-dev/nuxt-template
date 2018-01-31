@@ -11,7 +11,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "prettier": "prettier --ignore-path .gitignore --write ./**/*.{js,vue}",
-    "precommit": "npm run prettier && npm run lint"
+    "precommit": "npm run prettier && npm run lint",
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/dotenv": "^1.1.0",
@@ -32,7 +33,9 @@
     "vuex-class": "^0.3.0"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.11",
     "babel-eslint": "^8.2.1",
+    "babel-jest": "^22.1.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "dashify": "^1.0.0",
@@ -42,15 +45,37 @@
     "eslint-import-resolver-webpack": "^0.8.4",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.7.0",
     "eslint-plugin-prettier": "^2.5.0",
     "eslint-plugin-vue": "^4.0.0",
     "imagemin-webpack-plugin": "^1.6.1",
+    "jest": "^22.1.4",
+    "jest-vue-preprocessor": "^1.3.1",
     "node-sass": "^4.7.2",
     "prettier": "^1.10.2",
     "sass-loader": "^6.0.6",
+    "ts-jest": "^22.0.2",
     "ts-loader": "^3.3.1",
     "typescript": "^2.6.2",
     "webpack-bundle-analyzer": "^2.9.2",
     "webpack-jarvis": "^0.2.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".vue$": "<rootDir>/node_modules/jest-vue-preprocessor",
+      ".ts$": "<rootDir>/node_modules/ts-jest/preprocessor"
+    },
+    "moduleNameMapper": {
+      "^vue$": "vue/dist/vue.common.js",
+      "^~/(.*)$": "<rootDir>/$1"
+    },
+    "globals": {
+      "__TS_CONFIG__": "tsconfig.json",
+      "__TRANSFORM_HTML__": true
+    },
+    "moduleFileExtensions": ["ts", "js", "vue"],
+    "testRegex": "/test/.*\\.(ts|js)$",
+    "coveragePathIgnorePatterns": ["/node_modules/", "/test/.*\\.(ts|js)$", "/.*\\.vue$"]
   }
 }

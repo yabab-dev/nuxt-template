@@ -21,10 +21,10 @@ WIP
 * Hover.css & Animate.css
 * Popmotion
 * Koa server
+* Units tests with @vue/test-utils
 
 ## WIP
 
-* Units tests with Jest & vue-test-utils
 * E2E tests with Cypress
 * Accessibility checks with tota11y
 

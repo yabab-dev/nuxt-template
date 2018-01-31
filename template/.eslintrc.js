@@ -8,7 +8,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   extends: ['eslint:recommended', 'plugin:vue/recommended', 'prettier'],
-  plugins: ['vue', 'prettier'],
+  plugins: ['vue', 'prettier', 'jest'],
   rules: {
     'prettier/prettier': 'error',
     'class-methods-use-this': 0,
