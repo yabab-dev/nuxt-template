@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const path = require('path');
 const webpack = require('webpack');
+const dashify = require('dashify');
 
 const nameChunk = chunk => {
   if (chunk.name) return chunk.name;
@@ -11,7 +12,8 @@ const nameChunk = chunk => {
   const pathRegexp = new RegExp(basePath);
   for (const m of chunk._modules) {
     if (pathRegexp.test(m.context)) {
-      return m.context.replace(basePath, '').split('/')[0];
+      let chunkName = m.resource.replace(basePath, '').replace(/\.vue/, '');
+      return dashify(chunkName);
     }
   }
   return null;
