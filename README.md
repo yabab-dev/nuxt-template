@@ -22,11 +22,12 @@ WIP
 * Popmotion
 * Koa server
 * Units tests with @vue/test-utils
-
-## WIP
-
 * E2E tests with Cypress
 * Accessibility checks with tota11y
+
+## WIP
+* Cypress
+  * Start server before running it
 
 ## Installation
 

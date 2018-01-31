@@ -81,10 +81,9 @@ module.exports = {
   plugins: ['~/app/stores'],
 
   modules: [
-    '~/webpack/typescript',
-    '~/webpack/imagemin',
-    '~/webpack/bundleAnalyzer',
-    // '~/webpack/jarvis',
+    '~/modules/dev-tools',
+    '~/modules/typescript',
+    '~/modules/imagemin',
 
     '@nuxtjs/router',
     '@nuxtjs/dotenv',
