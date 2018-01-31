@@ -84,6 +84,7 @@ module.exports = {
     '~/webpack/typescript',
     '~/webpack/imagemin',
     '~/webpack/bundleAnalyzer',
+    // '~/webpack/jarvis',
 
     '@nuxtjs/router',
     '@nuxtjs/dotenv',

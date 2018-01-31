@@ -16,6 +16,7 @@ WIP
 * Webpack plugins
   * Bundle analyzer
   * Imagemin
+  * Jarvis
 * Spectre.css
 * Hover.css & Animate.css
 * Popmotion
