@@ -36,6 +36,7 @@
     "@vue/test-utils": "^1.0.0-beta.11",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^22.1.0",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "dashify": "^1.0.0",
@@ -74,8 +75,20 @@
       "__TS_CONFIG__": "tsconfig.json",
       "__TRANSFORM_HTML__": true
     },
-    "moduleFileExtensions": ["ts", "js", "vue"],
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "vue"
+    ],
     "testRegex": "/test/.*\\.(ts|js)$",
-    "coveragePathIgnorePatterns": ["/node_modules/", "/test/.*\\.(ts|js)$", "/.*\\.vue$"]
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "app/**/*.{js,ts,vue}"
+    ],
+    "mapCoverage": true,
+    "coverageReporters": [
+      "html",
+      "text-summary"
+    ]
   }
 }
