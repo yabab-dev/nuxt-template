@@ -1,8 +1,8 @@
-import { asyncAppComponent } from '~/vueclass';
+const HomePage = () => import('./home/HomePage').then(r => r.default);
 
 export default [
   {
     path: '/',
-    component: asyncAppComponent('home/HomePage'),
+    component: HomePage,
   },
 ];
